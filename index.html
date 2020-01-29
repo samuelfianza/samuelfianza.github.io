@@ -5,17 +5,261 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Samuel Fianza | Web Development</title>
-    <meta name="description" content="Official Page of Samuel Fianza - Web Developer">
+    <title>Samuel Fianza | Web Developer from The Philippines</title>
+    <meta name="description" content="Official Page of Samuel Fianza">
     <meta name="author" content="Samuel Fianza">
 
-    <style>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,800,900&display=swap" rel="stylesheet">
 
+    <style>
+        /* Defaults */
+        html { scroll-behavior: smooth;}
+        * { font-family: 'Raleway', sans-serif; }
+        body {
+            color: #333;
+            margin: 0;
+        }
+        section, div, footer, header, nav {
+            box-sizing: border-box;
+            position: relative;
+        }
+        input, textarea, button, .button { border-radius: 0; border-width: 2px; border-style: solid; padding: 10px 20px; color: inherit; display: inline-block; }
+        
+        h1 { }
+        h2 { font-size: 2.5em; }
+        h3 { font-size: 1.5em; }
+        p { font-size: 1.2em; margin-top: 5px; }
+        a { color: rgb(53, 25, 10); text-decoration: none; }
+        a:hover { color: rgb(77, 33, 9); }
+
+        .dark-theme { color: #fff; }
+        .dark-theme a { color: #aaa; }
+        .dark-theme a:hover { color: #eee; }
+        /* Classes */
+
+        .container { width: 100%; max-width: 1024px; padding: 0 20px; margin: 0 auto; }
+        .row { display: flex; flex-wrap: wrap; }
+        .row.spaced { margin-left: -10px; margin-right: -10px; }
+        .row.spaced .column { padding-left: 10px; padding-right: 10px; margin-bottom: 15px; }
+        .row:after { content: ''; display: block; clear: both; width: 100%; }
+        .column { display: block; flex: 100%; max-width: 100%; }
+
+        @media (min-width: 768px) {
+            .width-1-1 { flex: 100%; }
+            .width-1-2 { flex: 50%; }        
+            .width-1-4 { flex: 25%; }
+            .width-3-4 { flex: 75%; }
+            .width-1-3 { flex: calc(100% / 3); }
+            .width-2-3 { flex: calc(100% / 3 * 2); }
+        }
+
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .vertical-center { display: flex; align-items: center; }
+
+
+        /* Custom Styles */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            transition: all 0.5s;
+            background: rgba(0,0,0,0.5);
+        }
+
+
+        header ul { list-style: none; padding: 0; text-align: center; }
+        header ul li { display: inline-block; vertical-align: middle; }
+        header ul li a { font-size: 18px; padding: 5px 0; margin: 10px; color: #fff; transition: color 0.5s; }
+        header ul li:not(:first-child) a:hover {  border-bottom: 2px solid #fff; }
+        header ul li a:hover {  color: #fff; }
+
+        header.white { background: #fff; }
+        header.white ul li a { color: #333; }
+        header.white ul li:not(:first-child) a:hover {   border-bottom: 2px solid rgb(112, 67, 41);  }
+        header.white ul li a:hover {   color:rgb(112, 67, 41);   }
+
+        header li:first-child { 
+            display: block; padding-bottom: 10px;
+        }
+        header li:first-child a { 
+            font-size: 25px; 
+            font-weight: bold; 
+            padding: 0;
+        }
+
+        section { min-height: 100vh; padding-top: 100px; padding-bottom: 50px; }
+        .section-title { margin-bottom: 5px; }
+        .section-subtitle { margin-bottom: 50px; }
+        .next-section {
+            font-size: 1.3em;
+            border: 1px solid;
+            border-radius: 0 50px;
+            padding: 20px 30px;            
+        }
+        .next-section:hover {
+            background: #000 !important;
+            color: #fff !important;
+        }
+
+        #about { 
+            background: url('me.jpg') center rgba(0, 25, 20, 0.8); 
+            background-blend-mode: overlay;
+            background-size: cover; 
+            color: #fff;
+        }
+        #about .next-section {            background: rgba(0,0,0,0.7);        }
+        #services { background: #f0f0f0; color: #000; }
+        .service-box { 
+            padding: 20px; 
+            border-radius: 50px 0; 
+            box-shadow: 0 0 4px rgba(0,0,0,0.5);
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        #portfolio { background: #333; color: #fff; }
+        #portfolio .item { width: 100%; height: 200px; background: #555; }
+        #portfolio .next-section { background: #fff; color: #000; }
+        #contact { background: #111;  }
     </style>
 
 </head>
 
 <body>
-    TESTESTEST
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about">&lt; SF &gt;</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="about" class="vertical-center">
+        <div class="container">
+            <div class="row spaced">
+                <div class="column width-1-2 text-right">
+                    <div>
+                        <h1 style="font-size: 4em; margin: 0">Samuel Fianza</h1>
+                        <h2 style="font-size: 2em; margin: 0">Web Developer</h2>
+                    </div>
+                </div>
+                <div class="column width-1-2">
+                    <div style="padding-top: 100px;">                              
+                        <p>
+                            Since 2012, I have been developing websites that help individuals and businesses reach their potential audience. Specializing in custom theme creation for Wordpress and Shopify.  
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"><a class="button next-section" href="#services" style="margin-top: 100px">Learn More</a></div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container text-center">
+            <h2 class="section-title">Expertise</h2>
+            <p class="section-subtitle">Areas of focus where my passion-driven workflow applies best. </p>
+
+            <div class="row spaced">
+                <div class="column width-1-2">
+                    <div class="service-box" style="background: rgb(153, 197, 197)">
+                        <h3>Front-End Development<br />Wordpress Theme Development</h3>
+                        <p>Every type of website starts with a visually pleasing and engaging interface. From a simple informational website to a fully customized wordpress theme, I take extra care in ensuring compatibilty and effective user experience across multiple platforms and devices. </p>
+                    </div>
+                </div>
+                <div class="column width-1-2">
+                    <div class="service-box" style="background: #aca">
+                        <h3>E-commerce Website Development</h3>
+                        <p>Do you sell merch, digital products or offer services online? Give convenience to your customers by having your e-commerce website designed specifically for your products or services. I create fully customized themes for Shopify and Woocommerce (wordpress). </p>
+                    </div>
+                </div>
+                <div class="column width-1-2">
+                    <div class="service-box" style="background: rgb(192, 192, 192)">
+                        <h3>Custom Web Application</h3>
+                        <p>Do you need a website that requires custom functionalities? I am capable of developing custom web based solutions for specific applications. Common examples are online hotel booking systems, company payroll management systems, Employee data management systems, etc. </p>
+                    </div>
+                </div>
+                <div class="column width-1-2">
+                    <div class="service-box" style="background: rgb(196, 204, 125)">
+                        <h3>Content and Multimedia</h3>
+                        <p>I am also capable of designing graphics, audio and video for web content and social media marketing. Content is the most important part of a website after all. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a class="button next-section" href="#portfolio" style="margin-top: 100px">See Examples</a>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container text-center">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">Some of my previous work</p>
+
+            <div class="row spaced">
+                <div class="column width-1-3">
+                    <div class="item"></div>
+                </div>
+                <div class="column width-1-3">
+                    <div class="item"></div>
+                </div>
+                <div class="column width-1-3">
+                    <div class="item"></div>
+                </div>
+                <div class="column width-1-3">
+                    <div class="item"></div>
+                </div>
+                <div class="column width-1-3">
+                    <div class="item"></div>
+                </div>
+                <div class="column width-1-3">
+                    <div class="item"></div>
+                </div>
+
+            </div>
+            
+            <div class="text-center">
+                <a class="button next-section" href="#contact" style="margin-top: 100px">Want to know more?</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="dark-theme vertical-center">
+        <div class="container text-center">
+            <div>
+                <h2>Get in touch</h2>
+                <p>
+                    Let me help you make your plans into fruition. <br />Just throw me a message at <a href="mailto:samuelfianza@gmail.com">samuelfianza@gmail.com.</a><br />
+                </p>
+            </div>
+   
+        </div>
+    </section>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready( function(){
+                if( $(document).scrollTop() > $('#about').height() ){
+                    $('header').addClass('white');
+                } else {
+                    $('header').removeClass('white');
+                }
+            $(document).on('scroll', function(){
+                if( $(document).scrollTop() > $('#about').height() ){
+                    $('header').addClass('white');
+                } else {
+                    $('header').removeClass('white');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

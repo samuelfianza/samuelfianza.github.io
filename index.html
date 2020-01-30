@@ -73,7 +73,7 @@
             transition: all 0.5s;
             background: rgba(0,0,0,0.5);
         }
-
+        header.transparent { background: transparent; }
 
         header ul { list-style: none; padding: 0; text-align: center; }
         header ul li { display: inline-block; vertical-align: middle; }
@@ -249,16 +249,27 @@
     <script src="jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready( function(){
-                if( $(document).scrollTop() > $('#about').height() ){
-                    $('header').addClass('white');
-                } else {
-                    $('header').removeClass('white');
-                }
+            if( $(document).scrollTop() > $('#about').height() ){
+                $('header').addClass('white');
+            } else {
+                $('header').removeClass('white');
+            }
+            if( $(document).scrollTop() < 100 ){
+                $('header').addClass('transparent');
+            } else {
+                $('header').removeClass('transparent');
+            }
+            
             $(document).on('scroll', function(){
                 if( $(document).scrollTop() > $('#about').height() ){
                     $('header').addClass('white');
                 } else {
                     $('header').removeClass('white');
+                }
+                if( $(document).scrollTop() < 100 ){
+                    $('header').addClass('transparent');
+                } else {
+                    $('header').removeClass('transparent');
                 }
             });
         });

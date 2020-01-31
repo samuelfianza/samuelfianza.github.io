@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="index, nofollow" />
 
     <title>Samuel Fianza | Web Developer</title>
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="assets/favicon.png">
 
 
     <meta name="description" content="Web developer from the Philippines">
@@ -18,13 +18,13 @@
     <meta property="og:description" content="Web developer from the Philippines">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://samuelfianza.github.io/">
-    <meta property="og:image" content="https://samuelfianza.github.io/ogimage.jpg" />
+    <meta property="og:image" content="https://samuelfianza.github.io/assets/ogimage.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:alt" content="WEB DEVELOPER" />
 
 
-    <link href="fa/css/all.min.css" rel="stylesheet">
+    <link href="assets/fa/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500,800,900&display=swap" rel="stylesheet">
 
     <style>
@@ -93,11 +93,13 @@
         header ul { list-style: none; padding: 0; text-align: center; }
         header ul li { display: inline-block; vertical-align: middle; }
         header ul li a { font-size: 18px; padding: 5px 0; margin: 10px; color: #fff; transition: color 0.5s; }
+        header ul li:not(:first-child) a.active,
         header ul li:not(:first-child) a:hover {  border-bottom: 2px solid #fff; }
         header ul li a:hover {  color: #fff; }
 
         header.white { background: #fff; }
         header.white ul li a { color: #333; }
+        header.white ul li:not(:first-child) a.active,
         header.white ul li:not(:first-child) a:hover {   border-bottom: 2px solid rgb(112, 67, 41);  }
         header.white ul li a:hover {   color:rgb(112, 67, 41);   }
 
@@ -125,44 +127,55 @@
         }
 
         #about { 
-            background: url('me.jpg') center rgba(0, 25, 20, 0.6); 
+            background: url('images/me.jpg') center rgba(0, 25, 20, 0.6); 
             background-blend-mode: overlay;
             background-size: cover; 
             color: #fff;
         }
         #about .next-section {            background: rgba(0,0,0,0.7);        }
-        #services { background: #f0f0f0; color: #000; }
-        .service-box { 
+        #services { background: #eee; color: #000; }
+        #services .service-box { 
             padding: 20px; 
             border-radius: 50px 0; 
-            /* box-shadow: 0 0 4px rgba(0,0,0,0.5); */
-            border: 1px solid #ddd;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            /* border: 1px solid #ddd; */
             margin-bottom: 20px;
             min-height: 500px;
+            background: #fff;
         }
+        #services .service-box h3 { min-height: 3em; }
         #services .fas,
         #services .fab {
-            color: #000;
+            color: #fff;
             font-size: 60px;
             padding: 20px;
-            margin: 10px -21px;
+            margin: 10px -20px;
             line-height: 100px;
-            /* border: 1px solid #888; */
+            border: 5px solid #fff;
             border-radius: 100px;
             width: 100px;
             height: 100px;
             background: #fff;
+            transform: rotate(-20deg);
         }
         #services .fas:last-child,
         #services .fab:last-child {
             height: 60px;
-        width: 60px;
-        line-height: 60px;
-        font-size: 40px;
+            width: 60px;
+            line-height: 60px;
+            font-size: 40px;
+            transform: rotate(20deg);
          }
 
         #portfolio { background: #333; color: #fff; }
-        #portfolio .item { width: 100%; height: 200px; background: #555; }
+        #portfolio .item { width: 100%; height: 200px; background: #555; border: 2px solid #fff; }
+        #portfolio .item:hover { border: 2px solid #ccc; } 
+        #portfolio .item img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         #portfolio .next-section { background: #fff; color: #000; }
         #contact { background: #111;  }
     </style>
@@ -204,53 +217,53 @@
     </section>
     <section id="services">
         <div class="container text-center">
-            <h2 class="section-title">Expertise</h2>
+            <h2 class="section-title">Services</h2>
             <p class="section-subtitle">Areas of focus where my passion-driven workflow applies best. </p>
 
             <div class="row spaced">
                 <div class="column width-1-2">
-                    <div class="service-box" style="background: rgb(153, 197, 197)">
+                    <div class="service-box">
                         <h3>Front-End Development<br />Wordpress Theme Development</h3>
                         <p>
-                            <i class="fas fa-mobile-alt"></i>
-                            <i class="fas fa-desktop"></i>
+                            <i class="fas fa-desktop" style="background: rgb(0, 93, 121)"></i>
+                            <i class="fas fa-mobile-alt" style="background: rgb(0, 93, 121)"></i>
                         </p>
-                        <p>Every type of website starts with a visually pleasing and engaging interface. From a simple informational website to a fully customized wordpress theme, I take extra care in ensuring compatibilty and effective user experience across multiple platforms and devices. </p>
+                        <p>Every website needs to be visually engaging and user friendly. From a simple informational website to a fully customized wordpress theme, I take extra care in ensuring effective user experience and consistency across multiple platforms and devices. </p>
                     </div>
                 </div>
                 <div class="column width-1-2">
-                    <div class="service-box" style="background: #aca">
+                    <div class="service-box">
                         <h3>E-commerce Website Development</h3>
                         <p>
-                            <i class="fas fa-shopping-cart"></i>
-                            <i class="fas fa-tshirt"></i>
+                            <i class="fas fa-hand-holding-usd" style="background: #328632"></i>
+                            <i class="fas fa-shopping-cart" style="background: #328632"></i>
                         </p>
                         <p>Do you sell merch, digital products or offer services online? Give convenience to your customers by having your e-commerce website designed specifically for your products or services. I create fully customized themes for Shopify and Woocommerce (wordpress). </p>
                     </div>
                 </div>
                 <div class="column width-1-2">
-                    <div class="service-box" style="background: rgb(192, 192, 192)">
+                    <div class="service-box">
                         <h3>Custom Web Application</h3>
                         <p>
-                            <i class="fas fa-code"></i>
-                            <i class="fab fa-codepen"></i>
+                            <i class="fab fa-codepen" style="background: rgb(255, 37, 37)"></i>
+                            <i class="fas fa-code" style="background: rgb(255, 37, 37)"></i>
                         </p>
                         <p>Do you need a website that requires custom functionalities? I am capable of developing custom web based solutions for specific applications. Common examples are online hotel booking systems, company payroll management systems, Employee data management systems, etc. </p>
                     </div>
                 </div>
                 <div class="column width-1-2">
-                    <div class="service-box" style="background: rgb(196, 204, 125)">
+                    <div class="service-box">
                         <h3>Content and Multimedia</h3>
                         <p>
-                            <i class="fas fa-camera-retro"></i>
-                            <i class="fas fa-film"></i>
+                            <i class="fas fa-camera-retro" style="background: rgb(230, 149, 0)"></i>
+                            <i class="fas fa-film" style="background: rgb(230, 149, 0)"></i>
                         </p>
-                        <p>I am also capable of designing graphics, audio and video for web content and social media marketing. Content is the most important part of a website after all. </p>
+                        <p>Content is one of most important factors that drive web traffic. I am capable of designing graphics, audio and video for web content and social media marketing. </p>
                     </div>
                 </div>
             </div>
             <div class="text-center">
-                <a class="button next-section" href="#portfolio" style="margin-top: 100px">See Examples</a>
+                <a class="button next-section" href="#portfolio">See Examples</a>
             </div>
         </div>
     </section>
@@ -261,28 +274,28 @@
 
             <div class="row spaced">
                 <div class="column width-1-3">
-                    <div class="item"></div>
+                    <div class="item"><a href="http://klopferph.com/" target="_blank"><img src="images/port-klopfer.jpg" alt="" /></a></div>
                 </div>
                 <div class="column width-1-3">
-                    <div class="item"></div>
+                    <div class="item"><a href="https://uvacation.co/" target="_blank"><img src="images/port-uvacation.jpg" alt="" /></a></div>
                 </div>
                 <div class="column width-1-3">
-                    <div class="item"></div>
+                    <div class="item"><a href="https://themexicanponcho.com/" target="_blank"><img src="images/port-mexicanponcho.jpg" alt="" /></a></div>
                 </div>
                 <div class="column width-1-3">
-                    <div class="item"></div>
+                    <div class="item"><a href="http://samuelfianza.mypressonline.com/csldi/" target="_blank"><img src="images/port-csldi.jpg" alt="" /></div>
                 </div>
                 <div class="column width-1-3">
-                    <div class="item"></div>
+                    <div class="item"><a href="http://samuelfianza.mypressonline.com/cfspi/" target="_blank"><img src="images/port-cfspi.jpg" alt="" /></div>
                 </div>
                 <div class="column width-1-3">
-                    <div class="item"></div>
+                    <div class="item"><a href="http://samuelfianza.mypressonline.com/phightstyle/" target="_blank"><img src="images/port-phight.jpg" alt="" /></div>
                 </div>
 
             </div>
             
             <div class="text-center">
-                <a class="button next-section" href="#contact" style="margin-top: 100px">Want to know more?</a>
+                <a class="button next-section" href="#contact" style="margin-top: 70px">Let's start building your website</a>
             </div>
         </div>
     </section>
@@ -298,21 +311,30 @@
         </div>
     </section>
 
-    <script src="jquery-3.4.1.min.js"></script>
+    <script src="assets/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready( function(){
-            if( $(document).scrollTop() > $('#portfolio').offset().top-100 ){
-                $('header').addClass('white');
-            } else {
-                $('header').removeClass('white');
-            }
-            if( $(document).scrollTop() < 100 ){
-                $('header').addClass('transparent');
-            } else {
-                $('header').removeClass('transparent');
-            }
+            update_header();
             
             $(document).on('scroll', function(){
+                update_header();
+            });
+            function update_header() {
+                $('header nav li a').removeClass('active');
+                if( $(document).scrollTop() < $('#services').offset().top-200 ){
+
+                }                
+                if( $(document).scrollTop() > $('#services').offset().top-200 && $(document).scrollTop() < $('#portfolio').offset().top-200 ){
+                    $('header nav li:nth-child(2) a').addClass('active'); 
+                }                
+                if( $(document).scrollTop() > $('#portfolio').offset().top-200 && $(document).scrollTop() < $('#contact').offset().top-200 ){
+                    $('header nav li:nth-child(3) a').addClass('active');
+                }                
+                if( $(document).scrollTop() > $('#contact').offset().top-200  ){
+                    $('header nav li:nth-child(4) a').addClass('active');
+                }
+
+                
                 if( $(document).scrollTop() > $('#portfolio').offset().top-100 ){
                     $('header').addClass('white');
                 } else {
@@ -323,7 +345,7 @@
                 } else {
                     $('header').removeClass('transparent');
                 }
-            });
+            }
         });
     </script>
 </body>

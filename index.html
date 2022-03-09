@@ -81,12 +81,12 @@
 
         header {
             position: fixed;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
             z-index: 999;
             transition: all 0.5s;
-            background: rgba(0,0,0,0.9);
+            background: #000;
         }
         header.transparent { background: transparent; }
 
@@ -102,14 +102,17 @@
         header.white ul li:not(:first-child) a.active,
         header.white ul li:not(:first-child) a:hover {   border-bottom: 2px solid rgb(112, 67, 41);  }
         header.white ul li a:hover {   color:rgb(112, 67, 41);   }
+        header.white ul li:first-child a { background: #333; color: #fff; }
 
         header li:first-child { 
-            display: block; padding-bottom: 10px;
+            padding: 5px;
+            background: #fff;
         }
         header li:first-child a { 
             font-size: 25px; 
             font-weight: bold; 
             padding: 0;
+            color: #000;
         }
 
         section { min-height: 100vh; padding-top: 100px; padding-bottom: 50px; }
@@ -187,7 +190,7 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#about">&lt; SF &gt;</a></li>
+                    <li><a href="#about">SF</a></li>
                     <li><a href="#services">services</a></li>
                     <li><a href="#portfolio">portfolio</a></li>
                     <li><a href="#contact">contact</a></li>
@@ -207,7 +210,7 @@
                 <div class="column width-1-2">
                     <div style="padding-top: 220px;">                              
                         <p>
-                            Since 2012, I have been developing websites that help individuals and businesses reach their potential audience. Specializing in custom theme creation for Wordpress and Shopify.  
+                            I develop websites that help individuals and businesses reach their market. Specializing in custom theme creation for Wordpress and Shopify.  
                         </p>
                     </div>
                 </div>

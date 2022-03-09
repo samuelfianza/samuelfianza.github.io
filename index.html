@@ -92,17 +92,18 @@
 
         header ul { list-style: none; padding: 0; text-align: center; }
         header ul li { display: inline-block; vertical-align: middle; }
-        header ul li a { font-size: 18px; padding: 5px 0; margin: 10px; color: #fff; transition: color 0.5s; }
+        header ul li a { font-size: 18px; padding: 5px 0; margin: 10px; color: #fff; transition: color 0.5s; font-weight: 600; }
         header ul li:not(:first-child) a.active,
-        header ul li:not(:first-child) a:hover {  border-bottom: 2px solid #fff; }
+        header ul li:not(:first-child) a:hover {  border-bottom: 4px solid #fff; }
         header ul li a:hover {  color: #fff; }
 
         header.white { background: #fff; }
         header.white ul li a { color: #333; }
         header.white ul li:not(:first-child) a.active,
-        header.white ul li:not(:first-child) a:hover {   border-bottom: 2px solid rgb(112, 67, 41);  }
-        header.white ul li a:hover {   color:rgb(112, 67, 41);   }
-        header.white ul li:first-child a { background: #333; color: #fff; }
+        header.white ul li:not(:first-child) a:hover {   border-bottom: 4px solid #000;  }
+        header.white ul li a:hover {   color:#000;   }
+        header.white ul li:first-child a { color: #fff; }
+        header.white ul li:first-child { background: #333;  }
 
         header li:first-child { 
             padding: 5px;
@@ -130,7 +131,7 @@
         }
 
         #about { 
-            background: url('images/me.jpg') center rgba(0, 25, 20, 0.6); 
+            background: url('images/me.jpg') center rgba(0, 0, 0, 0.8); 
             background-blend-mode: overlay;
             background-size: cover; 
             color: #fff;
@@ -171,7 +172,7 @@
          }
 
         #portfolio { background: #333; color: #fff; }
-        #portfolio .item { width: 100%; height: 200px; background: #555; border: 2px solid #fff; }
+        #portfolio .item { width: 100%; height: 200px; background: #555; border: 2px solid #fff; border-radius: 30px 0; overflow: hidden; }
         #portfolio .item:hover { border: 2px solid #ccc; } 
         #portfolio .item img {
             display: block;
